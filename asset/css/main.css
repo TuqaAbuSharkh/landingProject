@@ -1,9 +1,11 @@
-
+/**star of header**/
 .header{
     position: sticky;
     top: 0;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding: 20px 0;
+    background-color: #fff;
+    z-index: 8;
 }
 .header .logo{
     display: flex;
@@ -36,6 +38,100 @@ width: 30px;
     background-color: var(--mainColor);
     color:#fff;
 }
+.burger-menu{
+    display: none;
+}
+@media (max-width:992px) {
+    .nav{
+        display: none;
+    }
+    .burger-menu{
+        display: inline-block;
+    }
+    .auth{
+        display: none;
+    }
+}
+@media(max-width:350px){
+    .logo a{
+        display: none;
+    }
+}
+/** end of header**/
+
+/**
+
+/**Testimonials **/
+.Testimonials{
+    text-align: center;
+    padding: 40px 0;
+}
+.Testimonials .row{
+    gap:40px;
+    
+}
+.Testimonials h2{
+    margin-bottom: 20px;
+}
+.Testimonial{
+    width:calc((100% - 40px) / 2);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap:10px;
+    align-items:flex-start;
+    box-shadow: 0px 14.237196px 8.23719596862793px rgba(0,0,0,0.2);
+    padding: 20px;
+    position: relative;
+}
+.Testimonial::after{
+    position: absolute;
+    content: '';
+    top:0;
+    right: 0;
+    border-top:40px solid #F4F4F4;
+    border-left:40px solid transparent;
+    border-bottom: 40px solid transparent;
+}
+.Testimonial .user{
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    align-items: center;
+}
+.Testimonial .user img{
+    width:50px;
+}
+.Testimonial .user .user-info{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap:10px;
+    align-items: flex-start;
+}
+.Testimonial .user .user-info span{
+color: #969696;
+}
+.Testimonial .rating{
+display: flex;
+flex-wrap: wrap;
+gap:6px;
+}
+
+.Testimonials .info{
+    color: #646464;
+    text-align: left;
+}
+@media (max-width:700px){
+    .Testimonial{
+        width: 100%;
+    }
+}
+
+/** end of testimonials **/
+
+
+/** start of footer**/
 .footer{
     background-color: #393e46;
     color: #fff;
@@ -63,6 +159,8 @@ width: 30px;
     display: flex;
     flex-direction: column;
     gap:30px;
+    flex-basis: 400px;
+    flex-grow: 1;
 }
 .footer-start .icons{
     display: flex;
@@ -102,3 +200,11 @@ width: 30px;
     font-size: 14px;
     font-weight: 200;
 }
+@media (max-width:400px){
+
+    .footer-start{
+        align-items: center;
+    }
+}
+/** end of footer**/
+
